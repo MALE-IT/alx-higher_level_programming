@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    new_string =""
+    new_string = ''
     for i in my_string:
-        if (i !='C') and (i !='c'):
+        if i.lower() not in ('c', 'C'):
             new_string += i
     return new_string
