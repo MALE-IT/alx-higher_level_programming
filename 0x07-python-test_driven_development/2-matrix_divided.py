@@ -25,8 +25,8 @@ def matrix_divided(matrix, div):
         not all(isinstance(ele, (int, float))
             for ele in [num for row in matrix for num in row])
     ):
-        raise TypeError("matrix must be a matrix (list of lists) of"
-                "integers/floats")
+        raise TypeError("matrix must be a matrix (list of lists) of "
+                        "integers/floats")
 
     # Check if each row of the matrix has the same size
     if not all(len(row) == len(matrix[0]) for row in matrix):
@@ -40,7 +40,7 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-   # Divide each element of the matrix by div, rounded to 2 decimal places
+    # Divide each element of the matrix by div, rounded to 2 decimal places
     return [
         [round(num / div, 2) for num in row]
         for row in matrix
