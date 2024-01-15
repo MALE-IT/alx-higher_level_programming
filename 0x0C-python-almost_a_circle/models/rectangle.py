@@ -60,6 +60,8 @@ class Rectangle(Base):
         """Setter for x."""
         if not isinstance(value, int):
             raise TypeError("X must be an integer")
+        if value < 0:
+            raise ValueError("X must be >= 0")
         self.__x = value
 
     @property
@@ -72,4 +74,6 @@ class Rectangle(Base):
         """Setter for y."""
         if not isinstance(value, int):
             raise TypeError("Y must be an integer")
+        if value < 0:
+            raise ValueError("Y must be >= 0")
         self.__y = value
